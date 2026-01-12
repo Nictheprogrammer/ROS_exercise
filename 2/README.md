@@ -47,14 +47,12 @@ class SimpleNode(Node):
         
         self.pub = self.create_publisher(String, 'chatter', 10) # create publisher
         
-        self.publish()
+        self.timer = self.create_timer(1.0, self.publish)
     
     def publish(self):
         msg = String()              # create a message object
         msg.data = 'Hello World:'   # set the message
         self.pub.publish(msg)       # publish the message
-        sleep(10)
-        self.publish()
         
 def main():
     rclpy.init()
@@ -119,6 +117,7 @@ To build the node, you need to run the following commands in the root directory 
 ```bash
 source /opt/ros/humble/setup.bash
 colcon build
+bash
 source install/setup.bash
 ```
 

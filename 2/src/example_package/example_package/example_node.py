@@ -9,7 +9,7 @@ from rclpy.node import Node
 
 class SkeletonNode(Node):
     def __init__(self):
-        super().__init__('blank_node')
+        super().__init__('example_node')
         #Create publishers and subscribers in init, use callback
         pass
     

@@ -1,4 +1,4 @@
-FROM spgc/duckiebot-base-image:amd
+FROM spgc/duckiebot-base-image:latest
 
 SHELL ["/bin/bash", "-c"]
 
