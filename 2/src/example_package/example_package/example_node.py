@@ -15,13 +15,13 @@ class SkeletonNode(Node):
         #Create publishers and subscribers in init, use callback
         self.pub= self.create_publisher(String, 'nicolas', 10)
         self.counter=0
-        self.timer=self.create_timer91.0, self.publish_msg
+        self.timer=self.create_timer(1.0, self.publish_msg)
     #Define callback functions here
     def publish msgs(self):
         msg = String()
         msg.data = 'Hello World'
         self.pub.publish(msg)
-    self.counter+=1
+        self.counter+=1
 
 
 def main():
