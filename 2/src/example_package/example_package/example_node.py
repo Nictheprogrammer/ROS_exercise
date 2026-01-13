@@ -17,7 +17,7 @@ class SkeletonNode(Node):
         self.counter=0
         self.timer=self.create_timer(1.0, self.publish_msg)
     #Define callback functions here
-    def publish msg(self):
+    def publish (self):
         msg = String()
         msg.data = 'Hello World'
         self.pub.publish(msg)
